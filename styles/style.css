@@ -1,0 +1,95 @@
+/* Color Theme Swatches in Hex */
+.Niki®-Studio-1-hex { color: #6E7073; }
+.Niki®-Studio-2-hex { color: #3C3E40; }
+.Niki®-Studio-3-hex { color: #D97904; }
+.Niki®-Studio-4-hex { color: #F2F2F2; }
+.Niki®-Studio-5-hex { color: #0D0D0D; }
+
+/* Color Theme Swatches in RGBA */
+.Niki®-Studio-1-rgba { color: rgba(110, 112, 114, 1); }
+.Niki®-Studio-2-rgba { color: rgba(59, 61, 63, 1); }
+.Niki®-Studio-3-rgba { color: rgba(216, 121, 4, 1); }
+.Niki®-Studio-4-rgba { color: rgba(242, 242, 242, 1); }
+.Niki®-Studio-5-rgba { color: rgba(12, 12, 12, 1); }
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url(https://img.freepik.com/free-photo/grunge-black-concrete-textured-background_53876-124541.jpg);
+}
+
+h1, h2{
+    color: rgba(242, 242, 242, 1);
+}
+
+p{
+    color: rgba(110, 112, 114, 1);
+}
+
+a{
+    color: rgba(0, 0, 5, 1);
+}
+
+header{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    margin: 25px 50px;
+}
+
+.logo > img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.list{
+    border-radius: 30px;
+    background: linear-gradient(-45deg, #b96601, #e3922f, #e25e12, #d8d904);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    margin: 25px;
+    padding: 25px 50px;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+ul {
+    list-style-type: none;
+}
+ul > h2{
+    padding-bottom: 10px;
+}
+
+ul > li{
+    padding-bottom: 5px;
+}
+
+li::before {
+
+    content: '🚀';
+    display: inline-block;
+    width: 20px; 
+    height: 20px; 
+    margin-right: 10px; 
+    vertical-align: middle; 
+}
+
+a{
+    text-decoration: none;
+}
+
+
