@@ -43,14 +43,14 @@
 @font-face {
     font-family: 'SourceSerifPro';
     src:
-        url('/week-1/styles/fonts/sourceserifpro/SourceSerifPro-Black.otf') format('otf'),
-        url('/week-1/styles/fonts/sourceserifpro/SourceSerifPro-Light.ttf') format('otf'),
-        url('/week-1/styles/fonts/sourceserifpro/SourceSerifPro-ExtraLight.ttf') format('truetype'),
+        url('fonts/sourceserifpro/SourceSerifPro-Black.otf') format('otf'),
+        url('fonts/sourceserifpro/SourceSerifPro-Light.ttf') format('otf'),
+        url('fonts/sourceserifpro/SourceSerifPro-ExtraLight.ttf') format('truetype'),
 
         /* OTF */
-        url('/week-1/styles/fonts/sourceserifpro/SourceSerifPro-Bold.ttf') format('truetype'),
-        url('/week-1/styles/fonts/sourceserifpro/SourceSerifPro-Light.ttf') format('truetype'),
-        url('/week-1/styles/fonts/sourceserifpro/SourceSerifPro-ExtraLight.ttf') format('truetype'),
+        url('fonts/sourceserifpro/SourceSerifPro-Bold.ttf') format('truetype'),
+        url('fonts/sourceserifpro/SourceSerifPro-Light.ttf') format('truetype'),
+        url('fonts/sourceserifpro/SourceSerifPro-ExtraLight.ttf') format('truetype'),
 
         /* TTF */
 }
@@ -192,7 +192,7 @@ header nav>ul {
 
 }
 
-.btn_reserve {
+/* .btn_reserve {
     width: 250px;
     height: 40px;
 
@@ -200,7 +200,7 @@ header nav>ul {
 
     border-radius: 15px;
     border: solid 1px blue;
-}
+} */
 
 .logo>a>img {
     width: 80px;
@@ -219,7 +219,7 @@ header nav>ul {
 
     position: relative;
     top: -80px;
-    background: url('/week-1/img/HeaderBackground.jpg') no-repeat center/cover;
+    background: url('img/HeaderBackground.jpg') no-repeat center/cover;
 
     margin-top: 80px;
     margin-bottom: 0px;
@@ -340,15 +340,15 @@ section, article {
 }
 
 .palace {
-    background: url(/week-1/img/GyeongbokgungPalace.jpg) no-repeat center/cover;
+    background: url('img/GyeongbokgungPalace.jpg') no-repeat center/cover;
 }
 
 .buchkok {
-    background: url(/week-1/img/BukchonHanokVillage.jpg) no-repeat center/cover;
+    background: url('img/BukchonHanokVillage.jpg') no-repeat center/cover;
 }
 
 .lotte {
-    background: url(/week-1/img/LotteWorld\ Seoul.jpg) no-repeat center/cover;
+    background: url('img/LotteWorld\ Seoul.jpg') no-repeat center/cover;
 }
 
 .beautifulPlace_wrapper__card__textbox {
@@ -434,7 +434,6 @@ section, article {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
     background-image: linear-gradient(to bottom right, #fff, #fcfafb), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23eaeaeb' d='M12 0l11 3v18l-11-3v-18zm1 21c5.523 0 10-4.477 10-10s-4.477-10-10-10-10 4.477-10 10 4.477 10 10 10z'/%3E%3C/svg%3E");
     background-size: cover;
-    font-family: Arial, sans-serif;
     color: #333;
     line-height: 1.5;
 }
@@ -604,16 +603,16 @@ section, article {
 
 
 .annaKim {
-    background: url(/week-1/img/annaGuide.jpg) no-repeat center/cover;
+    background: url('img/annaGuide.jpg') no-repeat center/cover;
 }
 
 .alexandrKim {
-    background: url(/week-1/img/alexanderGuide.jpg) no-repeat center/cover;
+    background: url('img/alexanderGuide.jpg') no-repeat center/cover;
 }
 
 /* Create JSON file with description tours and link from Json */
-.seul {
-    background: url(/week-1/img/whyKorean_1.jpeg) no-repeat;
+/* .seul {
+    background: url('img/whyKorean_1.jpeg') no-repeat;
     background-size: cover;
 }
 
@@ -625,4 +624,4 @@ section, article {
 .chezhudo {
     background: url(/week-1/img/whyKorean_3.jpeg) no-repeat;
     background-size: cover;
-}
+} */
