@@ -19,16 +19,16 @@
     <header id="#header" class="transparent">
       <div class="conteiner">
         <div class="logo">
-          <a href="index.html">
+          <a href="#welcome">
             <img src="styles/img/Logo.png" alt="SouthTrip" />
           </a>
         </div>
         <nav>
           <ul>
-            <li><a class="navLink" href="">Направления</a></li>
-            <li><a class="navLink" href="">Что включено</a></li>
-            <li><a class="navLink" href="">Ваши гиды</a></li>
-            <li><a class="navLink" href="">Впечатления</a></li>
+            <li><a class="navLink" href="#directions">Направления</a></li>
+            <li><a class="navLink" href="#includes">Что включено</a></li>
+            <li><a class="navLink" href="#ourGuides">Ваши гиды</a></li>
+            <li><a class="navLink" href="#reviews">Впечатления</a></li>
             <li><a class="navLink" href="">Бронирование</a></li>
           </ul>
         </nav>
@@ -36,7 +36,7 @@
       </div>
     </header>
     <main>
-      <section class="welcome">
+      <section class="welcome" id='welcome'>
         <div class="blackBackground"></div>
         <div class="whiteBackground"></div>
         <div class="conteiner">
@@ -50,7 +50,7 @@
           </div>
         </div>
       </section>
-      <article class="description">
+      <article class="description hidden_el" id="includes">
         <div class="conteiner">
           <p class="description-text">
             Путешествуя с SeoulTrip, вы не просто посещаете Корею, а
@@ -62,7 +62,7 @@
           </p>
         </div>
       </article>
-      <section class="beautifulPlace">
+      <section class="beautifulPlace hidden_el">
         <div class="conteiner">
           <h2 class="beautifulPlace-title">
             ВАС ЖДУТ <span class="red">БОЛЕЕ 20</span> КРАСИВЕЙШИХ
@@ -109,7 +109,7 @@
           </div>
         </div>
       </section>
-      <section class="direction">
+      <section class="direction" id="directions">
         <div class="conteiner paper-effect">
           <h2 class="direction-title">Направления и туры</h2>
           <div class="direction_select">
@@ -187,7 +187,7 @@
           </div>
         </div>
       </article>
-      <section class="ourGuide">
+      <section class="ourGuide" id="ourGuides">
         <div class="conteiner">
           <h1 class="ourGuide-title">Наши Гиды</h1>
           <div class="ourGuide_wrapper">
@@ -216,9 +216,120 @@
           </div>
         </div>
       </section>
+      <section class="reviews">
+        <div class="conteiner">
+          <h2 class="reviews-title">Ваши впечатления</h2>
+          <div class="reviews_carousel paper-effect">
+            <button class="prev">&#8592;</button>
+            <button class="next">&#8594;</button>
+            <div class="carousel_wrapper">
+              <div class="card_field">
+                <div class="card_inner">
+                  <div class="card-front">
+                    <img src="styles/img/SeulTour.jpg" alt="">
+                    <div class="card_inner_textbox">
+                      <div class="card_inner_textbox-background">
+                      </div>
+                        <h3>Анна Ким</h3>
+                        <p>text</p>
+                    </div>
+                  </div>
+                  <div class="card-back">
+                    <h3>test  </h3>
+                    <p>521</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card_field">
+                <div class="card_inner">
+                  <div class="card-front">
+                    <img src="styles/img/SeulTour.jpg" alt="">
+                    <div class="card_inner_textbox">
+                      <div class="card_inner_textbox-background">
+                      </div>
+                        <h3>text</h3>
+                        <p>text</p>
+                    </div>
+                  </div>
+                  <div class="card-back">
+                    <h3>test  </h3>
+                    <p>521</p>
+                  </div>
+                </div>
+              </div>              <div class="card_field">
+                <div class="card_inner">
+                  <div class="card-front">
+                    <img src="styles/img/SeulTour.jpg" alt="">
+                    <div class="card_inner_textbox">
+                      <div class="card_inner_textbox-background">
+                      </div>
+                        <h3>text</h3>
+                        <p>text</p>
+                    </div>
+                  </div>
+                  <div class="card-back">
+                    <h3>test  </h3>
+                    <p>521</p>
+                  </div>
+                </div>
+              </div>              
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer></footer>
-    <section id="destinations"></section>
+    <footer class="footer">
+      <div class="container">
+          <div class="footer_logo">
+              <img src="styles/img/Logo.png" alt="SouthTrip Logo">
+              <p>Исследуй Корею с нами!</p>
+          </div>
+          <div class="footer_links">
+              <h3>Меню</h3>
+              <ul>
+                <li><a class="navLink" href="#directions">Направления</a></li>
+                <li><a class="navLink" href="#includes">Что включено</a></li>
+                <li><a class="navLink" href="#ourGuides">Ваши гиды</a></li>
+                <li><a class="navLink" href="#reviews">Впечатления</a></li>
+                <li><a class="navLink" href="">Бронирование</a></li>
+                  </ul>
+          </div>
+          <div class="footer_contact">
+              <h3>Контакты</h3>
+              <a href="https://yandex.ru/maps/213/moscow/?ll=37.622780%2C55.753019&mode=poi&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D68465353453&z=18.43">📍 Москва, Красная площадь</a>
+              <a href="tel:+7 982-582-56-78">📞 +7 982-582-56-78</a>
+              <a href="mailto:support@southtrip.com">✉ support@southtrip.com</a>
+          </div>
+          <div class="footer_social">
+              <h3>Мы в соцсетях</h3>
+              <a href="https://vk.com"><img src="styles/img/icons/icon-vk.svg" alt="VKontakte"></a>
+              <a href="https://www.instagram.com/"><img src="styles/img/icons/icon_instagram.svg" alt="Instagram"></a>
+              <a href="https://telegram.org/"><img src="styles/img/icons/icon-telegram.svg" alt="icon-telegram"></a>
+          </div>
+      </div>
+      <div class="footer_bottom">
+          <p>© 2025 SouthTrip | Все права защищены.</p>
+      </div>
+  </footer>
+  <!-- <div id="tour-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+        <p><strong>Цена:</strong> <span id="modal-price"></span></p>
+    </div>
+</div>
+<div class="tour-card" data-title="Сеул: Город Огней" data-description="Ночной тур по Сеулу с посещением лучших достопримечательностей." data-price="100$">
+  <h3>Сеул: Город Огней</h3>
+  <p>Ночной тур по столице.</p>
+</div>
+<div class="tour-card" data-title="Чеджу: Остров мечты" data-description="Экскурсия на лучший остров Южной Кореи." data-price="150$">
+  <h3>Чеджу: Остров мечты</h3>
+  <p>Путешествие по острову Чеджу.</p>
+</div>   -->
+
+
+    <!-- <section id="destinations"></section> -->
     <script src="index.js"></script>
   </body>
 </html>
