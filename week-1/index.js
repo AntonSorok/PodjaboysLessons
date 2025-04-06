@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
      // Функция для смены отзывов (сдвиг карусели)
      function updateCarousel() {
-       const offset = -currentIndex * 325; // Ширина карточки + отступ
+       const offset = -currentIndex * 425; // Ширина карточки + отступ
        carousel.style.transform = `translateX(${offset}px)`;
      }
 

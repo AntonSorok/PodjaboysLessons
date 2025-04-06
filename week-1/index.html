@@ -7,16 +7,14 @@
       name="description"
       content="SouthTrip - Travel agency that shows a new world."
     />
-    <!-- description for TTS-->
     <meta name="keywords" content="travel, agency, South Korea, SouthTrip" />
-    <!-- keywords for CEO search-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <title>SouthTrip</title>
   </head>
   <body>
-    <header id="#header" class="transparent">
+    <header id="header" class="transparent">
       <div class="conteiner">
         <div class="logo">
           <a href="#welcome">
@@ -32,7 +30,6 @@
             <li><a class="navLink" href="">Бронирование</a></li>
           </ul>
         </nav>
-        <!-- <button class="btn_reserve">Забронированить путешествие!</button> -->
       </div>
     </header>
     <main>
@@ -46,7 +43,7 @@
               Авторские туры с погружением в локальную культуру. Малые группы,
               нестандартные маршруты, незабываемые эмоции
             </p>
-            <button class="btn">Выбрать направление</button>
+            <button>Выбрать направление</button>
           </div>
         </div>
       </section>
@@ -65,50 +62,47 @@
       <section class="beautifulPlace hidden_el">
         <div class="conteiner">
           <h2 class="beautifulPlace-title">
-            ВАС ЖДУТ <span class="red">БОЛЕЕ 20</span> КРАСИВЕЙШИХ
-            <span class="red">ЛОКАЦИЙ</span>
+            Вас ждут <span class="red">более 20</span> красивейших
+            <span class="red">локаций</span>
           </h2>
-
           <div class="beautifulPlace_wrapper">
             <div class="beautifulPlace_wrapper__card palace">
               <div class="beautifulPlace_wrapper__card__textbox">
                 <div class="back"></div>
-                <h3 class="beautifulPlace_wrapper__card__back-title">
+                <h3 class="beautifulPlace_wrapper__card__back-title bold">
                   Дворец Кёнбоккун
                 </h3>
               </div>
-              <!-- <img
-              src="/week-1/img/beautifulPlace_Palce.jpg"
-              alt="cardsWithBeautifulPlace"
-              /> -->
             </div>
             <div class="beautifulPlace_wrapper__card buchkok">
               <div class="beautifulPlace_wrapper__card__textbox">
                 <div class="back"></div>
-                <h3 class="beautifulPlace_wrapper__card__back-title">
+                <h3 class="beautifulPlace_wrapper__card__back-title bold">
                   Деревня Букчон Ханок 
                 </h3>
               </div>
-              <!-- <img
-              src="/week-1/img/beautifulPlace_Palce.jpg"
-              alt="cardsWithBeautifulPlace"
-              /> -->
             </div>
             <div class="beautifulPlace_wrapper__card lotte">
               <div class="beautifulPlace_wrapper__card__textbox">
                 <div class="back"></div>
-                <h3 class="beautifulPlace_wrapper__card__back-title">
+                <h3 class="beautifulPlace_wrapper__card__back-title bold">
                   Lotte World Seoul
                 </h3>
               </div>
-              <!-- <img
-              src="/week-1/img/beautifulPlace_Palce.jpg"
-              alt="cardsWithBeautifulPlace"
-              /> -->
             </div>
           </div>
         </div>
       </section>
+      <section class="callToAction">
+        <div class="conteiner">
+          <div class="callToAction_wrapper">
+            <h2 class="callToAction-title">Оставьте заявку, и наш эксперт 
+              подберёт вам тур в Южную Корею 
+              с учётом всех пожеланий</h2>
+              <button class="btn">Получить консультацию</button>
+          </div>
+        </div>
+       </section>
       <section class="direction" id="directions">
         <div class="conteiner paper-effect">
           <h2 class="direction-title">Направления и туры</h2>
@@ -122,7 +116,7 @@
           </div>
           <div class="direction_wrapper">
             <div class="direction_wrapper__left">
-              <img src="styles/img/SeulTour.jpg" alt="SeoulPicture" />
+              <img src="styles/img/HeaderBackground.jpg" alt="SeoulPicture" />
             </div>
             <div class="direction_wrapper__right">
               <h3 class="direction_wrapper__right-title">
@@ -158,9 +152,9 @@
       </section>
       <article class="advantages">
         <div class="conteiner">
-          <h1 class="advantages-title">Мы позаботились обо всем за вас</h1>
+          <h2 class="advantages-title">Мы позаботились обо всем за вас</h2>
           <div class="advantages_wrapper">
-            <div class="advantages_wrapper__card">
+            <div class="advantages_wrapper__card paper-effect">
               <img src="styles/img/icons/Hearts.svg" alt="heartsIcon" />
               <p>Перелеты и трансферы</p>
               <p>
@@ -168,7 +162,7 @@
                 аэропорта
               </p>
             </div>
-            <div class="advantages_wrapper__card">
+            <div class="advantages_wrapper__card paper-effect">
               <img src="styles/img/icons/Hearts.svg" alt="heartsIcon" />
               <p>Поддержка 24/7</p>
               <p>
@@ -176,7 +170,7 @@
                 уверенно и комфортно
               </p>
             </div>
-            <div class="advantages_wrapper__card">
+            <div class="advantages_wrapper__card paper-effect">
               <img src="styles/img/icons/Hearts.svg" alt="heartsIcon" />
               <p>Проживание в отеле</p>
               <p>
@@ -189,7 +183,7 @@
       </article>
       <section class="ourGuide" id="ourGuides">
         <div class="conteiner">
-          <h1 class="ourGuide-title">Наши Гиды</h1>
+          <h2 class="ourGuide-title">Наши Гиды</h2>
           <div class="ourGuide_wrapper">
             <div class="ourGuide_wrapper__card">
               <img src="styles/img/annaGuide.jpg" alt="annaGuide" />
@@ -197,10 +191,6 @@
                 <div class="ourGuide_wrapper__card__back"></div>
                 <h3 class="ourGuide_wrapper__card-title">Анна Ким</h3>
               </div>
-              <!-- <img
-              src="/week-1/img/beautifulPlace_Palce.jpg"
-              alt="cardsWithBeautifulPlace"
-              /> -->
             </div>
             <div class="ourGuide_wrapper__card">
               <img src="styles/img/alexanderGuide.jpg" alt="alexanderGuide" />
@@ -208,10 +198,6 @@
                 <div class="ourGuide_wrapper__card__back"></div>
                 <h3 class="ourGuide_wrapper__card-title">Александр Пак</h3>
               </div>
-              <!-- <img
-                src="/week-1/img/beautifulPlace_Palce.jpg"
-                alt="cardsWithBeautifulPlace"
-                /> -->
             </div>
           </div>
         </div>
@@ -223,65 +209,28 @@
             <button class="prev">&#8592;</button>
             <button class="next">&#8594;</button>
             <div class="carousel_wrapper">
-              <!-- <div class="card_field">
-                <div class="card_inner">
-                  <div class="card-front">
-                    <img src="styles/img/SeulTour.jpg" alt="">
-                    <div class="card_inner_textbox">
-                      <div class="card_inner_textbox-background">
-                      </div>
-                        <h3>Анна Ким</h3>
-                        <p>text</p>
-                    </div>
-                  </div>
-                  <div class="card-back">
-                    <h3>test  </h3>
-                    <p>521</p>
-                  </div>
-                </div>
-              </div>
-              <div class="card_field">
-                <div class="card_inner">
-                  <div class="card-front">
-                    <img src="styles/img/SeulTour.jpg" alt="">
-                    <div class="card_inner_textbox">
-                      <div class="card_inner_textbox-background">
-                      </div>
-                        <h3>text</h3>
-                        <p>text</p>
-                    </div>
-                  </div>
-                  <div class="card-back">
-                    <h3>test  </h3>
-                    <p>521</p>
-                  </div>
-                </div>
-              </div>              <div class="card_field">
-                <div class="card_inner">
-                  <div class="card-front">
-                    <img src="styles/img/SeulTour.jpg" alt="">
-                    <div class="card_inner_textbox">
-                      <div class="card_inner_textbox-background">
-                      </div>
-                        <h3>text</h3>
-                        <p>text</p>
-                    </div>
-                  </div>
-                  <div class="card-back">
-                    <h3>test  </h3>
-                    <p>521</p>
-                  </div>
-                </div> -->
               </div>              
             </div>
           </div>
         </div>
       </section>
+      <section class="callToAction">
+        <div class="conteiner">
+          <div class="callToAction_wrapper">
+            <h2 class="callToAction-title">Оставьте заявку, и наш эксперт 
+              подберёт вам тур в Южную Корею 
+              с учётом всех пожеланий</h2>
+              <button class="btn">Получить консультацию</button>
+          </div>
+        </div>
+       </section>
     </main>
     <footer class="footer">
       <div class="container">
           <div class="footer_logo">
+            <a href="#header">
               <img src="styles/img/Logo.png" alt="SouthTrip Logo">
+            </a>
               <p>Исследуй Корею с нами!</p>
           </div>
           <div class="footer_links">
@@ -330,6 +279,7 @@
 
 
     <!-- <section id="destinations"></section> -->
+     
     <script src="index.js"></script>
   </body>
 </html>
