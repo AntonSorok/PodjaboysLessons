@@ -377,9 +377,8 @@ nav>ul>li>a {
     justify-content: space-between;
 
     max-width: 700px;
-    height: 1000px;
-
-    margin-top: 350px;
+    height: 500px;
+    margin-top: 150px;
     /* max-height: 100vh; */
 }
 
