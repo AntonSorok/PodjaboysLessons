@@ -675,12 +675,8 @@ nav>ul>li>a {
 }
 
 .ourGuide_wrapper__card {
-    width: 40%;
-    max-height: 100%;
 
-    display: flex;
-    justify-content: center;
-    align-items: end;
+    max-height: 100%;
 
     position: relative;
     z-index: 0;
@@ -767,6 +763,14 @@ nav>ul>li>a {
     margin-top: 50px;
 }
 
+.review-description {
+    font-size: 24px;
+}
+
+.review-mark {
+    font-size: 30px;
+}
+
 .carousel_wrapper {
     display: flex;
     gap: 50px;
@@ -834,6 +838,8 @@ nav>ul>li>a {
 }
 
 .card-back {
+    gap: 50px;
+    padding: 0 50px;
     background: #ffefdb;
     transform: rotateY(180deg);
 
@@ -858,8 +864,7 @@ nav>ul>li>a {
     position: absolute;
     bottom: 0;
     left: 0;
-
-
+    z-index: 1;
 }
 
 .card_inner_textbox-background {

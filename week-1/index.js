@@ -45,10 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
   fetch('./reviews.json')
     .then((response) => response.json())
     .then((data) => {
-      console.log("Данные из JSON:", data); // Посмотреть, что загружено
+      console.log('Данные из JSON:', data); // Посмотреть, что загружено
       // const container = document.querySelector('.carousel_wrapper');
       const carousel = document.querySelector('.carousel_wrapper');
-
 
       data.reviews.forEach((reviews) => {
         const card = document.createElement('div');
@@ -59,15 +58,15 @@ document.addEventListener('DOMContentLoaded', () => {
                       <div class="card-front">
                           <img src="${reviews.image}" alt="Фото ${reviews.name}">
                           <div class="card_inner_textbox">
-                              <div class="card_inner_textbox-background"></div>
-                              <h3>${reviews.name}</h3>
-                              <p>⭐⭐⭐⭐⭐ ${reviews.rating}</p>
+                          <h3 class='bold'>${reviews.name}</h3>
+                          <p class='review-mark'>⭐⭐⭐⭐⭐ ${reviews.rating}</p>
                           </div>
+                          <div class="card_inner_textbox-background"></div>
                       </div>
                       <div class="card-back">
-                          <h3>${reviews.name}</h3>
-                          <p>${reviews.review}</p>
-                          <p><strong>Оценка: ${reviews.rating} ⭐</strong></p>
+                          <h3 class='bold'>${reviews.name}</h3>
+                          <p class='review-description'> ${reviews.review}</p>
+                          <p class='review-mark'><strong>Оценка: ${reviews.rating} ⭐</strong></p>
                       </div>
                   </div>
               `;
@@ -75,42 +74,39 @@ document.addEventListener('DOMContentLoaded', () => {
         // Добавляем обработчик клика для переворота карточки
         card.addEventListener('click', () => {
           card.classList.toggle('flipped');
-
-          
-    
         });
 
         carousel.appendChild(card);
       });
-      const cards = document.querySelectorAll('.card_field')
-     let currentIndex = 0;
+      const cards = document.querySelectorAll('.card_field');
+      let currentIndex = 0;
 
-     // Функция для смены отзывов (сдвиг карусели)
-     function updateCarousel() {
-       const offset = -currentIndex * 425; // Ширина карточки + отступ
-       carousel.style.transform = `translateX(${offset}px)`;
-     }
+      // Функция для смены отзывов (сдвиг карусели)
+      function updateCarousel() {
+        const offset = -currentIndex * 425; // Ширина карточки + отступ
+        carousel.style.transform = `translateX(${offset}px)`;
+      }
 
-         // Переключение на следующую карточку
-   nextBtn.addEventListener('click', () => {
-     if (currentIndex < cards.length - 3) {
-       currentIndex++;
-       updateCarousel();
-     }
-     console.log(cards);
-     console.log(cards.length);
+      // Переключение на следующую карточку
+      nextBtn.addEventListener('click', () => {
+        if (currentIndex < cards.length - 4) {
+          currentIndex++;
+          updateCarousel();
+          console.log(currentIndex);
+        } else if (currentIndex < cards.length - 3) {
+          currentIndex++;
+          // Изменить при другом кол-ве карточек
+          carousel.style.transform = `translateX(${-700}px`;
+        }
+      });
 
-   });
-
-     // Переключение на предыдущую карточку
-     prevBtn.addEventListener('click', () => {
-       if (currentIndex > 0) {
-         currentIndex--;
-         updateCarousel();
-       }
-       console.log('left arrow');
-
-     })
+      // Переключение на предыдущую карточку
+      prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateCarousel();
+        }
+      });
     })
     .catch((error) => console.error('Ошибка загрузки отзывов:', error));
 });
