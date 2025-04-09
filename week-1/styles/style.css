@@ -919,15 +919,14 @@ button.prev:hover+button.next:hover {
     background: #2c2c2c;
     color: #f8f8f8;
     padding: 40px 20px;
-    font-family: 'Arial', sans-serif;
+    /* font-family: Source Serif Pro; */
     text-align: center;
 }
 
-footer>.container {
+.footer_wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    max-width: 1100px;
     margin: auto;
 }
 
@@ -1152,7 +1151,8 @@ footer h3 {
     }
 
     a {
-        font-size: .5em
+        font-size: .5em;
+        line-height: normal;
     }
 
     button {
@@ -1368,6 +1368,311 @@ footer h3 {
         font-size: 1em;
     }
 
+    .footer {
+        padding: 20px 10px;
+    }
+
+    .footer_logo img {
+        width: 50px;
+        margin-bottom: 10px;
+    }
+
+    .footer_logo p {
+        font-size: 0.75em;
+    }
+
+    .footer_links {
+        gap: 10px;
+    }
+
+    .footer_links>ul li {
+        margin: 0;
+    }
+
+    .footer_bottom {
+        margin-top: 0s;
+        padding-top: 10px;
+        font-size: 0.75em;
+    }
+
 }
 
-/* Доделать футтер адаптивный */
+@media (max-width:400px) {
+    body {
+        background: lightcoral;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1em;
+        line-height: 20px;
+    }
+
+    h3 {
+        font-size: 1em;
+        line-height: 20px;
+    }
+
+    h3.bold {
+        font-size: .75em;
+        line-height: 15px;
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 20px;
+    }
+
+    a {
+        font-size: .5em;
+        line-height: normal;
+    }
+
+    button {
+        font-size: .75em;
+        line-height: 10px;
+        width: auto;
+        height: auto;
+
+        padding: 10px;
+    }
+
+    /* ############ General styles ################ */
+
+    .conteiner {
+        max-width: 320px;
+    }
+
+    section, article {
+        margin: 25px 0;
+    }
+
+    .callToAction-title {
+        font-size: .75em;
+        line-height: normal;
+    }
+
+    .callToAction_wrapper {
+        gap: 25px;
+        padding: 20px;
+    }
+
+    /* ########################### */
+    .logo {
+        display: none;
+    }
+
+    nav>ul {
+        gap: 10px;
+    }
+
+    nav>ul>li>a {
+        display: inline-block;
+        width: 50px;
+    }
+
+    .welcome {
+        padding-top: 70px;
+    }
+
+    .welcome__textbox {
+        max-width: 300px;
+        height: 250px;
+
+        gap: 30px;
+        margin-top: 0;
+    }
+
+    .welcome p {
+        font-size: 1em;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 3px;
+    }
+
+    .description-text {
+        font-size: .75em;
+        line-height: 30px;
+    }
+
+    .beautifulPlace_wrapper {
+        margin-top: 15px;
+    }
+
+    .beautifulPlace_wrapper__card {
+        width: 100px;
+        height: 150px;
+    }
+
+    .beautifulPlace_wrapper__card__textbox {
+        height: 40px;
+    }
+
+    .direction_select {
+        margin-top: 15px;
+    }
+
+    .direction_select a {
+        font-size: .5em;
+    }
+
+    .direction_wrapper {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .direction_wrapper__left {
+        width: 100%
+    }
+
+    .direction_wrapper__right {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .feature {
+        gap: 10px;
+    }
+
+    .feature>span {
+        width: 20px;
+        height: 20px;
+
+    }
+
+    .feature>span>img {
+        width: 100%;
+    }
+
+    .feature p {
+        font-size: .5em;
+        line-height: 10px;
+    }
+
+    .advantages_wrapper {
+        margin-top: 15px;
+        gap: 10px;
+    }
+
+    .advantages_wrapper__card {
+        max-width: 300px;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .advantages_wrapper__card>img {
+        width: 50px;
+    }
+
+    .advantages_wrapper__card p {
+        font-size: .5em;
+        text-align: center;
+    }
+
+    .ourGuide_wrapper {
+        margin-top: 15px;
+        gap: 20px;
+    }
+
+    .ourGuide_wrapper__card {
+        max-width: 400px;
+    }
+
+    .ourGuide_wrapper__card__textbox {
+        height: 30px;
+    }
+
+    .ourGuide_wrapper__card__back {
+        height: 30px;
+    }
+
+    .reviews_carousel {
+        padding: 15px;
+        margin-top: 0;
+    }
+
+    .carousel_wrapper {
+        gap: 15px;
+    }
+
+    .card-back {
+        gap: 10px;
+        padding: 20px 10px;
+    }
+
+    .card_inner_textbox {
+        width: 100%;
+        height: 50px;
+    }
+
+    .card_inner_textbox-background {
+        width: 100%;
+        height: 50px;
+    }
+
+    button.prev,
+    button.next {
+        width: 25px;
+        height: 50px;
+
+        padding: 5px;
+    }
+
+    button.prev {
+        left: 5px;
+    }
+
+    button.next {
+        right: 5px;
+    }
+
+    .card_field {
+        max-width: 300px;
+    }
+
+    .card_inner {
+        width: 250px;
+        height: 200px;
+    }
+
+    .review-description {
+        font-size: 0.75em;
+    }
+
+    .review-mark {
+        font-size: 1em;
+    }
+
+    .footer {
+        padding: 20px 10px;
+    }
+
+    .footer_logo {
+        display: none;
+    }
+
+    .footer_links {
+        gap: 10px;
+    }
+
+    .footer_links>ul li {
+        margin: 0;
+    }
+
+    .footer_social img {
+        width: 20px;
+        margin: 5px;
+
+    }
+
+    .footer_bottom {
+        margin-top: 0s;
+        padding-top: 10px;
+        font-size: 0.75em;
+    }
+
+}

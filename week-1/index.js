@@ -75,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('click', () => {
           card.classList.toggle('flipped');
         });
+        // Не работает на мобильных устройствах
 
         carousel.appendChild(card);
       });
@@ -83,8 +84,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Функция для смены отзывов (сдвиг карусели)
       function updateCarousel() {
-        const offset = -currentIndex * 425; // Ширина карточки + отступ
-        carousel.style.transform = `translateX(${offset}px)`;
+        if (window.innerWidth <= 400) {
+          const offset = -currentIndex * 265;
+          console.log(offset);
+          carousel.style.transform = `translateX(${offset}px)`;
+
+          nextBtn.addEventListener('click', () => {
+            if (currentIndex < cards.length - 1) {
+              currentIndex++;
+              updateCarousel();
+              console.log(currentIndex);
+            } else if (currentIndex < cards.length) {
+              currentIndex++;
+              // Изменить при другом кол-ве карточек
+            }
+          });
+
+          prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+              currentIndex--;
+              updateCarousel();
+            }
+          });
+          console.log('first iteration');
+        } else if (window.innerWidth > 400) {
+          const offset = -currentIndex * 425; // Ширина карточки + отступ
+          console.log(offset);
+          carousel.style.transform = `translateX(${offset}px)`;
+        }
+        // carousel.style.transform = `translateX(${offset}px)`;
+        // console.log(offset);
       }
 
       // Переключение на следующую карточку
@@ -107,6 +136,8 @@ document.addEventListener('DOMContentLoaded', () => {
           updateCarousel();
         }
       });
+      console.log('second iteration');
+
     })
     .catch((error) => console.error('Ошибка загрузки отзывов:', error));
 });
