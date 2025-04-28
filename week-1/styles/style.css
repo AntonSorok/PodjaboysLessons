@@ -1,0 +1,1498 @@
+@font-face {
+    font-family: 'SourceSerifPro';
+    src:
+        url('fonts/sourceserifpro/SourceSerifPro-Black.otf') format('otf'),
+        url('fonts/sourceserifpro/SourceSerifPro-Light.ttf') format('otf'),
+        url('fonts/sourceserifpro/SourceSerifPro-ExtraLight.ttf') format('truetype'),
+
+        /* OTF */
+        url('fonts/sourceserifpro/SourceSerifPro-Bold.ttf') format('truetype'),
+        url('fonts/sourceserifpro/SourceSerifPro-Light.ttf') format('truetype'),
+        url('fonts/sourceserifpro/SourceSerifPro-ExtraLight.ttf') format('truetype'),
+
+        /* TTF */
+}
+
+/* :root {
+    --titleColor: #FFFFFF;
+    --textColor: #FFFFFF;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: 80px;
+    font-family: Source Serif Pro;
+    font-weight: 400;
+    letter-spacing: 0px;
+
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 45px;
+    font-family: Source Serif Pro;
+    font-weight: 700;
+    line-height: 55px;
+    letter-spacing: 0px;
+
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 30px;
+    font-family: Source Serif Pro;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0px;
+
+    color: #1D3557;
+}
+
+h3.bold {
+    font-size: 35px;
+    font-family: Source Serif Pro;
+    font-weight: 700;
+    line-height: 35px;
+    letter-spacing: 0px;
+}
+
+p {
+    font-size: 20px;
+    font-family: Source Serif Pro;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0px;
+}
+
+
+a {
+    font-size: 20px;
+    font-family: Source Serif Pro;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0px;
+
+    text-decoration: none;
+    color: #000;
+}
+
+button {
+    font-size: 30px;
+    font-family: Source Serif Pro;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0px;
+    text-align: center;
+
+    max-width: 460px;
+    padding: 15px 70px;
+
+    background: #FFB400;
+    justify-self: center;
+
+    border: 0;
+}
+
+button:hover {
+    background: #F4C2C2;
+}
+
+/* General params */
+body {
+    background: #F8F5E4;
+}
+
+.conteiner {
+    max-width: 1600px;
+    margin: auto;
+}
+
+section, article {
+    margin: 0 auto 100px auto;
+}
+
+
+.paper-effect {
+    color: #333;
+    line-height: 1.5;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    background-image: linear-gradient(to bottom right, #fff, #fcfafb), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23eaeaeb' d='M12 0l11 3v18l-11-3v-18zm1 21c5.523 0 10-4.477 10-10s-4.477-10-10-10-10 4.477-10 10 4.477 10 10 10z'/%3E%3C/svg%3E");
+    background-size: cover;
+
+    padding: 20px;
+}
+
+.callToAction_wrapper {
+    display: flex;
+    background: #4E9177;
+    align-items: center;
+
+    gap: 100px;
+    padding: 50px;
+}
+
+.callToAction-title {
+    max-width: 1400px;
+
+    text-transform: none;
+}
+
+/* .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.tour-card h3+p {
+    color: black
+}
+
+.modal-content h2+p {
+    color: #000;
+}
+
+.hidden_el {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+} */
+
+/* ############# */
+
+header {
+    width: 100vw;
+    top: 0;
+    left: 0;
+    height: auto;
+    background: #F8F5E4;
+    border-bottom: solid 1px #1D3557;
+
+    /* margin: auto; */
+
+    position: fixed;
+    z-index: 9999;
+    transition: transform 0.3s ease-in-out;
+}
+
+header.hidden {
+    transform: translateY(-100%);
+    transition-duration: 0.5s;
+}
+
+header.transparent {
+    background-color: transparent;
+    box-shadow: none;
+    transition: 0.5s;
+
+    border-bottom: none;
+}
+
+header>.conteiner {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+}
+
+.logo {
+    max-width: 80px;
+    max-height: 80px;
+
+}
+
+.logo>a>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.logo>a {
+    display: contents;
+}
+
+header nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    /* margin: auto; */
+    /* align-content: center; */
+}
+
+nav>ul {
+    display: flex;
+    gap: 50px;
+
+    list-style: none;
+}
+
+nav>ul>li>a {
+    display: inline-block;
+}
+
+/*   ############ Первая часть страницы ########### */
+
+.whiteBackground {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 30%;
+    height: 100vh;
+
+    background-color: #f5f1f1;
+    opacity: 0.13;
+    z-index: 2;
+}
+
+.blackBackground {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #000;
+    opacity: 0.35;
+    z-index: 1;
+}
+
+.welcome {
+    height: 100vh;
+
+    position: relative;
+    top: -80px;
+    background: url('img/HeaderBackground.jpg') no-repeat center/cover;
+
+    margin-top: 80px;
+    margin-bottom: 0px;
+    padding-top: 110px;
+    padding-bottom: 100px;
+
+    z-index: 0;
+}
+
+.welcome .conteiner {
+    position: relative;
+    z-index: 3;
+
+    padding-left: 25%;
+}
+
+.welcome__textbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    max-width: 700px;
+    height: 500px;
+    margin-top: 150px;
+}
+
+.welcome h1 {
+    color: #FFFFFF;
+}
+
+.welcome p {
+    font-size: 30px;
+    font-family: Source Serif Pro;
+    font-weight: 400;
+    line-height: 45px;
+    letter-spacing: 5px;
+
+    color: #FFFFFF;
+}
+
+/* ######### Description part ######## */
+
+.description-text {
+    font-size: 35px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 55px;
+    letter-spacing: 0;
+    color: #000;
+}
+
+/* ########## Beautiful Part ########## */
+
+.beautifulPlace-title {
+    text-align: center;
+}
+
+.beautifulPlace-title>.red {
+    color: #E63946
+}
+
+.beautifulPlace_wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+.beautifulPlace_wrapper__card {
+    max-width: 450px;
+    max-height: 600px;
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+    position: relative;
+    border-radius: 25px;
+    z-index: 0;
+
+}
+
+.beautifulPlace_wrapper__card>img {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+.beautifulPlace_wrapper__card__textbox {
+    width: 100%;
+    height: 90px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+}
+
+.back {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 0px 25px 25px;
+
+    position: absolute;
+
+    background-color: #d9d9d9;
+    opacity: 0.44;
+    z-index: 1;
+}
+
+.beautifulPlace_wrapper__card__back-title {
+    text-align: center;
+
+    z-index: 3;
+}
+
+/* ############ Direction part ############# */
+
+.direction-title {
+    text-align: center;
+}
+
+.direction_select {
+    margin-top: 50px;
+}
+
+.direction_select>ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.direction_select a {
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.direction_wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+
+    padding: 50px;
+}
+
+
+
+.direction_wrapper__left {
+    width: 50%;
+}
+
+.direction_wrapper__left>img {
+    width: 100%;
+}
+
+
+
+.direction_wrapper__right {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+
+}
+
+.direction_wrapper__right-features {
+    display: flex;
+    justify-content: space-around;
+}
+
+.feature {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.feature p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    color: #000000;
+}
+
+.feature>span {
+    width: 30px;
+    height: 30px;
+    color: #000;
+
+}
+
+/* ############## Advantages ############ */
+
+.advantages-title {
+    text-align: center;
+}
+
+.advantages_wrapper {
+    display: flex;
+    justify-content: space-evenly;
+
+    margin-top: 50px;
+}
+
+.advantages_wrapper__card {
+    max-width: 400px;
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+
+    padding: 25px;
+
+}
+
+/* ############# OurGuides ############# */
+
+.ourGuide-title {
+    text-align: center;
+}
+
+.ourGuide_wrapper {
+    display: flex;
+    justify-content: space-evenly;
+
+    margin-top: 50px;
+}
+
+.ourGuide_wrapper__card {
+
+    max-height: 100%;
+
+    position: relative;
+    z-index: 0;
+}
+
+.ourGuide_wrapper__card img {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+.ourGuide_wrapper__card__textbox {
+    width: 100%;
+    height: 110px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+}
+
+.ourGuide_wrapper__card__back {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    background-color: #d9d9d9;
+    opacity: 0.44;
+    z-index: 1;
+
+}
+
+.ourGuide_wrapper__card-title {
+    z-index: 3;
+}
+
+
+.annaKim {
+    background: url('img/annaGuide.jpg') no-repeat center/cover;
+}
+
+.alexandrKim {
+    background: url('img/alexanderGuide.jpg') no-repeat center/cover;
+}
+
+/* ############# Reviews ########### */
+
+.reviews-title {
+    text-align: center;
+}
+
+.reviews_carousel {
+    position: relative;
+
+
+    overflow: hidden;
+    padding: 25px 50px 50px 50px;
+    margin-top: 50px;
+}
+
+.review-description {
+    font-size: 24px;
+}
+
+.review-mark {
+    font-size: 30px;
+}
+
+.carousel_wrapper {
+    display: flex;
+    gap: 50px;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+
+    z-index: 0;
+}
+
+.card_field {
+    perspective: 1000px;
+    flex-shrink: 0;
+}
+
+.card_inner {
+    width: 400px;
+    height: 600px;
+
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-sizing: border-box;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+
+
+    position: relative;
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-back {
+    justify-content: space-between;
+    padding: 50px;
+    background: #ffefdb;
+    transform: rotateY(180deg);
+
+}
+
+.card_field.flipped .card_inner {
+    transform: rotateY(180deg);
+}
+
+.card_inner_textbox {
+    width: 100%;
+    height: 110px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.card_inner_textbox-background {
+    width: 100%;
+    height: 100px;
+
+    position: absolute;
+    border-radius: 0 0 20px 20px;
+
+    bottom: 0;
+    left: 0;
+
+    background-color: white;
+    opacity: 0.3;
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+    top: 50%;
+    z-index: 5;
+    width: 100px;
+
+    font-size: 20px;
+    padding: 10px;
+    transform: translateY(-50%);
+
+    color: white;
+    cursor: pointer;
+
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover+button.next:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+
+.footer {
+    background: #2c2c2c;
+    color: #f8f8f8;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+footer h3 {
+    color: #FFFFFF;
+}
+
+.footer_logo {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.footer_logo img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.footer_logo p {
+    font-size: 14px;
+    color: #bbb;
+}
+
+.footer_links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer_links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer_links ul li {
+    margin: 5px 0;
+}
+
+.footer_links ul li a {
+    text-decoration: none;
+    color: #f8f8f8;
+    transition: 0.3s;
+}
+
+.footer_links ul li a:hover {
+    color: #ffcc80;
+}
+
+.footer_contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer_contact a {
+    text-decoration: none;
+    color: #f8f8f8;
+    transition: 0.3s;
+}
+
+.footer_contact a:hover {
+    color: #ffcc80;
+}
+
+
+.footer_social img {
+    width: 30px;
+    margin: 5px;
+    transition: transform 0.3s;
+}
+
+.footer_social img:hover {
+    transform: scale(1.1);
+}
+
+.footer_bottom {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #444;
+    font-size: 14px;
+}
+
+@media (min-width:800px) and (max-width: 1440px) {
+    h1 {
+        font-size: 3.5em;
+    }
+
+    h2 {
+        font-size: 3.5em;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+
+    h3.bold {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1.5em;
+    }
+
+    a {
+        font-size: 1em
+    }
+
+    button {
+        font-size: 1.5em;
+    }
+
+    /* ############ General styles ################ */
+
+    .conteiner {
+        max-width: 1200px;
+    }
+
+    .callToAction-title {
+        font-size: 2em;
+    }
+
+    /* ########################### */
+
+    nav>ul {
+        display: flex;
+        gap: 25px;
+
+        list-style: none;
+    }
+
+    nav>ul>li>a {
+        display: inline-block;
+    }
+
+    .welcome__textbox {
+        max-width: 500px;
+        height: 300px;
+
+        gap: 25px;
+        margin-top: 25px;
+    }
+
+    .welcome__textbox p {
+        font-size: 1.5em;
+
+    }
+
+    .beautifulPlace_wrapper__card {
+        width: 300px;
+        height: 400px;
+    }
+
+    .direction_wrapper__left>img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .direction_select a {
+        font-size: 1.5em;
+    }
+
+    .feature p {
+        font-size: .75em;
+    }
+
+    .advantages_wrapper__card {
+        max-width: 300px;
+    }
+
+    .advantages_wrapper__card p {
+        text-align: center;
+    }
+
+    .ourGuide_wrapper__card {
+        max-width: 400px;
+    }
+
+    .card_field {
+        max-width: 300px;
+    }
+
+    .card_inner {
+        width: 300px;
+        height: 400px;
+    }
+
+}
+
+@media (min-width:400px) and (max-width: 799px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1em;
+        line-height: 20px;
+    }
+
+    h3.bold {
+        font-size: 1em;
+        line-height: 15px;
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 20px;
+    }
+
+    a {
+        font-size: .5em;
+        line-height: normal;
+    }
+
+    button {
+        font-size: .75em;
+        line-height: 10px;
+        width: auto;
+        height: auto;
+
+        padding: 10px;
+    }
+
+    /* ############ General styles ################ */
+
+    .conteiner {
+        max-width: 600px;
+    }
+
+    section, article {
+        margin: 0px auto 50px auto;
+    }
+
+    .callToAction-title {
+        font-size: 1em;
+        line-height: 20px;
+    }
+
+    .callToAction_wrapper {
+        gap: 50px;
+        padding: 20px;
+    }
+
+    /* ########################### */
+
+    .logo {
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    nav>ul {
+        gap: 15px;
+    }
+
+    nav>ul>li>a {
+        display: inline-block;
+    }
+
+    .welcome__textbox {
+        max-width: 300px;
+        height: 250px;
+
+        gap: 10px;
+        margin-top: 0;
+    }
+
+    .welcome p {
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 5px;
+    }
+
+    .description-text {
+        font-size: 1em;
+        line-height: 30px;
+    }
+
+    .beautifulPlace_wrapper {
+        margin-top: 25px;
+    }
+
+    .beautifulPlace_wrapper__card {
+        width: 150px;
+        height: 200px;
+    }
+
+    .beautifulPlace_wrapper__card__textbox {
+        width: 100%;
+        height: 40px;
+    }
+
+    .back {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px 0px 25px 25px;
+
+        position: absolute;
+
+        background-color: #d9d9d9;
+        opacity: 0.44;
+        z-index: 1;
+    }
+
+    .direction_wrapper__left>img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .direction_select {
+        margin-top: 25px;
+    }
+
+    .direction_select a {
+        font-size: 1em;
+    }
+
+    .direction_wrapper {
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .direction_wrapper__right {
+        gap: 10px;
+    }
+
+    .feature {
+        gap: 10px;
+    }
+
+    .feature>span {
+        width: 20px;
+        height: 20px;
+
+    }
+
+    .feature>span>img {
+        width: 100%;
+    }
+
+    .feature p {
+        font-size: .5em;
+        line-height: 10px;
+    }
+
+    .advantages_wrapper {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .advantages_wrapper__card {
+        max-width: 200px;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .advantages_wrapper__card>img {
+        width: 50px;
+    }
+
+    .advantages_wrapper__card p {
+        text-align: center;
+    }
+
+    .ourGuide_wrapper {
+        gap: 20px;
+    }
+
+    .ourGuide_wrapper__card {
+        max-width: 400px;
+    }
+
+    .ourGuide_wrapper__card__textbox {
+        height: 50px;
+    }
+
+    .ourGuide_wrapper__card__back {
+        height: 50px;
+    }
+
+    .reviews_carousel {
+        margin-top: 0;
+    }
+
+    .carousel_wrapper {
+        gap: 15px;
+    }
+
+    .card-back {
+        gap: 10px;
+        padding: 20px 10px;
+    }
+
+    .card_inner_textbox {
+        width: 100%;
+        height: 50px;
+    }
+
+    .card_inner_textbox-background {
+        width: 100%;
+        height: 50px;
+    }
+
+    button.prev,
+    button.next {
+        width: 25px;
+        height: 50px;
+
+        padding: 5px;
+    }
+
+    button.prev {
+        left: 5px;
+    }
+
+    button.next {
+        right: 5px;
+    }
+
+    .card_field {
+        max-width: 300px;
+    }
+
+    .card_inner {
+        width: 150px;
+        height: 200px;
+    }
+
+    .review-description {
+        font-size: 0.75em;
+    }
+
+    .review-mark {
+        font-size: 1em;
+    }
+
+    .footer {
+        padding: 20px 10px;
+    }
+
+    .footer_logo img {
+        width: 50px;
+        margin-bottom: 10px;
+    }
+
+    .footer_logo p {
+        font-size: 0.75em;
+    }
+
+    .footer_links {
+        gap: 10px;
+    }
+
+    .footer_links>ul li {
+        margin: 0;
+    }
+
+    .footer_bottom {
+        margin-top: 0s;
+        padding-top: 10px;
+        font-size: 0.75em;
+    }
+
+}
+
+@media (max-width:400px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1em;
+        line-height: 20px;
+    }
+
+    h3 {
+        font-size: 1em;
+        line-height: 20px;
+    }
+
+    h3.bold {
+        font-size: .75em;
+        line-height: 15px;
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 20px;
+    }
+
+    a {
+        font-size: .5em;
+        line-height: normal;
+    }
+
+    button {
+        font-size: .75em;
+        line-height: 10px;
+        width: auto;
+        height: auto;
+
+        padding: 10px;
+    }
+
+    /* ############ General styles ################ */
+
+    .conteiner {
+        max-width: 320px;
+    }
+
+    section, article {
+        margin: 25px 0;
+    }
+
+    .callToAction-title {
+        font-size: .75em;
+        line-height: normal;
+    }
+
+    .callToAction_wrapper {
+        gap: 25px;
+        padding: 20px;
+    }
+
+    /* ########################### */
+    .logo {
+        display: none;
+    }
+
+    nav>ul {
+        gap: 10px;
+    }
+
+    nav>ul>li>a {
+        display: inline-block;
+    }
+
+    .welcome {
+        padding-top: 70px;
+    }
+
+    .welcome__textbox {
+        max-width: 300px;
+        height: 250px;
+
+        gap: 30px;
+        margin-top: 0;
+    }
+
+    .welcome p {
+        font-size: 1em;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 3px;
+    }
+
+    .description-text {
+        font-size: .75em;
+        line-height: 30px;
+    }
+
+    .beautifulPlace_wrapper {
+        margin-top: 15px;
+    }
+
+    .beautifulPlace_wrapper__card {
+        width: 100px;
+        height: 150px;
+    }
+
+    .beautifulPlace_wrapper__card__textbox {
+        height: 40px;
+    }
+
+    .direction_select {
+        margin-top: 15px;
+    }
+
+    .direction_select a {
+        font-size: .5em;
+    }
+
+    .direction_wrapper {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .direction_wrapper__left {
+        width: 100%
+    }
+
+    .direction_wrapper__right {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .feature {
+        gap: 10px;
+    }
+
+    .feature>span {
+        width: 20px;
+        height: 20px;
+
+    }
+
+    .feature>span>img {
+        width: 100%;
+    }
+
+    .feature p {
+        font-size: .5em;
+        line-height: 10px;
+    }
+
+    .advantages_wrapper {
+        margin-top: 15px;
+        gap: 10px;
+    }
+
+    .advantages_wrapper__card {
+        max-width: 300px;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .advantages_wrapper__card>img {
+        width: 50px;
+    }
+
+    .advantages_wrapper__card p {
+        font-size: .5em;
+        text-align: center;
+    }
+
+    .ourGuide_wrapper {
+        margin-top: 15px;
+        gap: 20px;
+    }
+
+    .ourGuide_wrapper__card {
+        max-width: 400px;
+    }
+
+    .ourGuide_wrapper__card__textbox {
+        height: 30px;
+    }
+
+    .ourGuide_wrapper__card__back {
+        height: 30px;
+    }
+
+    .reviews_carousel {
+        padding: 15px;
+        margin-top: 0;
+    }
+
+    .carousel_wrapper {
+        gap: 15px;
+    }
+
+    .card-back {
+        gap: 10px;
+        padding: 20px 10px;
+    }
+
+    .card_inner_textbox {
+        width: 100%;
+        height: 50px;
+    }
+
+    .card_inner_textbox-background {
+        width: 100%;
+        height: 50px;
+    }
+
+    button.prev,
+    button.next {
+        width: 25px;
+        height: 50px;
+
+        padding: 5px;
+    }
+
+    button.prev {
+        left: 5px;
+    }
+
+    button.next {
+        right: 5px;
+    }
+
+    .card_field {
+        max-width: 300px;
+    }
+
+    .card_inner {
+        width: 250px;
+        height: 200px;
+    }
+
+    .review-description {
+        font-size: 0.75em;
+    }
+
+    .review-mark {
+        font-size: 1em;
+    }
+
+    .footer {
+        padding: 20px 10px;
+    }
+
+    .footer_logo {
+        display: none;
+    }
+
+    .footer_links {
+        gap: 10px;
+    }
+
+    .footer_links>ul li {
+        margin: 0;
+    }
+
+    .footer_social img {
+        width: 20px;
+        margin: 5px;
+
+    }
+
+    .footer_bottom {
+        margin-top: 0s;
+        padding-top: 10px;
+        font-size: 0.75em;
+    }
+
+}
